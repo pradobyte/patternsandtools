@@ -2,7 +2,12 @@ package br.com.projetobase.domain.model;
 
 import java.math.BigDecimal;
 
-public record ItemCheckout(TipoCheckout tipoCheckout, String descricao, BigDecimal valor) {
+public record ItemCheckout(TipoItemCheckout tipoCheckout, String descricao, BigDecimal valor) {
 
+    public enum  TipoItemCheckout {
+        ALIQUOTA,
+        FRETE,
+        DESCONTO
+    }
 
 }
